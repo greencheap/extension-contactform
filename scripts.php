@@ -20,7 +20,7 @@ return [
                 $table->addColumn('title', 'string');
                 $table->addColumn('date', 'datetime');
                 $table->addColumn('send_type', 'integer');
-                $table->addColumn('to_who', 'string');
+                $table->addColumn('from_address', 'string');
                 $table->addColumn('data', 'json_array', ['notnull' => false]);
             });
         }

@@ -7,8 +7,6 @@
                     <input type="text" v-model="form.title" class="uk-input uk-form-large uk-width-expand" :placeholder="'Enter title' | trans" required>
                 </div>
             </div>
-
-
             <div class="uk-margin">
                 <label class="uk-form-label">{{'Your Fields' | trans}}</label>
                 <draggable :list="form.data.fields" handle=".handle">

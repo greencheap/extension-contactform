@@ -3,7 +3,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        'form-edit':'./app/views/form-edit'
+        'form-edit':'./app/views/form-edit',
+        'form-index':'./app/views/form-index'
     },
     output: {
         path: path.resolve(__dirname, './app/bundle'),

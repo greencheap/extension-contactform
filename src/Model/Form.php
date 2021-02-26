@@ -6,6 +6,7 @@ use GreenCheap\Database\ORM\Annotation\Entity;
 use GreenCheap\Database\ORM\Annotation\Id;
 use GreenCheap\Database\ORM\ModelTrait;
 use GreenCheap\System\Model\DataModelTrait;
+use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * Class Form
@@ -15,6 +16,10 @@ use GreenCheap\System\Model\DataModelTrait;
 class Form implements \JsonSerializable
 {
     use ModelTrait, DataModelTrait;
+
+    const TYPE_MAIL = 0;
+
+    const TYPE_HTTP = 1;
 
     /**
      * @Id
@@ -31,6 +36,28 @@ class Form implements \JsonSerializable
      * @Column(type="datetime")
      */
     public $date;
+
+    /**
+     * @Column(type="integer")
+     */
+    public $send_type;
+
+    /**
+     * @Column(type="string")
+     */
+    public $from_address;
+
+    /**
+     * @return array
+     */
+    #[ArrayShape([self::TYPE_MAIL => "mixed", self::TYPE_HTTP => "mixed"])]
+    public static function getTypes(): array
+    {
+        return [
+            self::TYPE_MAIL => __('Mail'),
+            self::TYPE_HTTP => __('Http')
+        ];
+    }
 
     /**
      * @inheritDoc

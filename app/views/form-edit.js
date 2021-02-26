@@ -42,15 +42,15 @@ const Form = {
 
     methods:{
         save(){
-            this.$http.post('admin/api/blog/post', {
-                id: this.post.id,
-                data: this.post,
+            this.$http.post('admin/api/contactform/save', {
+                id: this.form.id,
+                form: this.form,
             }).then((res) => {
                 const response = res.data;
-                if (!this.post.id) {
-                    window.history.replaceState({}, '', this.$url.route('admin/blog/post/edit', { id: response.post.id, type: response.post.type }));
+                if (!this.form.id) {
+                    window.history.replaceState({}, '', this.$url.route('admin/contactform/edit', { id: response.query.id, type: response.query.type }));
                 }
-                this.$set(this, 'post', response.post);
+                this.$set(this, 'form', response.query);
                 this.$notify(this.$trans('Saved'));
             }).catch((err) => {
                 this.$notify(err.data, 'danger');

@@ -22,6 +22,12 @@ return [
             'controller' => [
                 'GreenCheap\\ContactForm\\Controller\\AdminController'
             ]
+        ],
+        'api/contactform' => [
+            'name' => '@api/contactform',
+            'controller' => [
+                'GreenCheap\\ContactForm\\Controller\\ApiAdminController'
+            ]
         ]
     ]
 ];
