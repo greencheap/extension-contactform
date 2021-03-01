@@ -16,7 +16,7 @@
             <div class="uk-form-controls">
                 <div class="uk-inline">
                     <span class="uk-form-icon" :uk-icon="`icon:${getTypeIcon}`"></span>
-                    <input type="text" class="uk-input uk-form-width-large" v-model="form.from_address">
+                    <input type="text" class="uk-input uk-form-width-large" v-model="form.from_address" required>
                 </div>
                 <span class="uk-display-block uk-text-small uk-margin-small">{{ 'Address to send the reply' | trans }}</span>
             </div>
@@ -24,18 +24,19 @@
 
         <div v-if="getType == 'url'" class="uk-margin">
             <div class="uk-margin">
-
+                <button class="uk-button uk-button-primary" @click.prevent="addValueHeader">{{ 'Add Header Value' | trans }}</button>
             </div>
-            <label class="uk-form-label">{{ 'Form Address Header' | trans }}</label>
-            <div class="uk-form-controls">
-                <div class="uk-margin uk-flex">
-                    <input type="input" :placeholder="'Name' | trans" class="uk-input uk-width-expand uk-margin-small-right">
-                    <input type="input" :placeholder="'Value' | trans" class="uk-input uk-width-expand">
-                    <div class="uk-flex uk-flex-middle uk-flex-center">
-                        <a class="uk-margin-small-left" uk-icon="icon:trash;ratio:1.2" :uk-tooltip="'Delete Item' | trans"></a>
+            <div v-if="form.data.headers.length">
+                <label class="uk-form-label">{{ 'Form Address Header' | trans }}</label>
+                <div class="uk-form-controls">
+                    <div v-for="(header, id) in form.data.headers" :key="id" class="uk-margin uk-flex">
+                        <input type="input" :placeholder="'Name' | trans" class="uk-input uk-width-expand uk-margin-small-right">
+                        <input type="input" :placeholder="'Value' | trans" class="uk-input uk-width-expand">
+                        <div class="uk-flex uk-flex-middle uk-flex-center">
+                            <a @click.prevent="deleteValueHeader(id)" class="uk-margin-small-left" uk-icon="icon:trash;ratio:1.2" :uk-tooltip="'Delete Item' | trans"></a>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -116,6 +117,19 @@ export default {
                 return 'mail';
             }
             return 'link'
+        }
+    },
+
+    methods:{
+        addValueHeader(){
+            this.form.data.headers.push({
+                name: '',
+                value: ''
+            })
+        },
+
+        deleteValueHeader(id){
+            this.form.data.headers.splice(id, 1)
         }
     }
 }
