@@ -1,4 +1,7 @@
 <?php
+
+use GreenCheap\ContactForm\Model\Form;
+
 return [
     'name' => 'contactform',
 
@@ -16,11 +19,26 @@ return [
         ]
     ],
 
+    'nodes' => [
+        'contact' => [
+            'label' => 'Contact',
+            'name' => '@contact',
+            'controller' => 'GreenCheap\\ContactForm\\Controller\\SiteController::indexAction',
+            'frontpage' => true,
+            'protected' => true
+        ]
+    ],
+
+    'widgets' => [
+        'widgets/form.php'
+    ],
+
     'routes' => [
         'contactform' => [
             'name' => '@contactform',
             'controller' => [
-                'GreenCheap\\ContactForm\\Controller\\AdminController'
+                'GreenCheap\\ContactForm\\Controller\\AdminController',
+                'GreenCheap\\ContactForm\\Controller\\SiteController'
             ]
         ],
         'api/contactform' => [
@@ -29,5 +47,21 @@ return [
                 'GreenCheap\\ContactForm\\Controller\\ApiAdminController'
             ]
         ]
+    ],
+
+    'events' => [
+        'view.system/site/admin/edit' => function($event, $view) use ($app)
+        { 
+            $view->script('contact-settings', 'contactform:app/bundle/node-settings.js', ['site-edit']);
+
+            $db = $app['db'];
+
+            $forms = $db->createQueryBuilder()
+            ->select(['id', 'title'])
+            ->from('@contactform_form')
+            ->get();
+
+            $view->data('$contactform', $forms);
+        }
     ]
 ];

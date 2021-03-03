@@ -1,0 +1,158 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GreenCheap 3.0.7 (greencheap/contactform, messages)\n"
+"POT-Creation-Date: 2021-03-03 13:05+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Saved"
+msgstr ""
+
+msgid "Forms copied."
+msgstr ""
+
+msgid "Deleted forms!"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Forms"
+msgstr ""
+
+msgid "Markdown"
+msgstr ""
+
+msgid "Company Name"
+msgstr ""
+
+msgid "Company Email"
+msgstr ""
+
+msgid "Company Phone"
+msgstr ""
+
+msgid "Company Fax"
+msgstr ""
+
+msgid "Company Tax Number"
+msgstr ""
+
+msgid "Company Tax Office"
+msgstr ""
+
+msgid "Company Map"
+msgstr ""
+
+msgid "Company Address"
+msgstr ""
+
+msgid "Contact Form Select"
+msgstr ""
+
+msgid "Blank"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Smtp Bilgileriniz Girilmemiş"
+msgstr ""
+
+msgid "Post Type"
+msgstr ""
+
+msgid "From Address"
+msgstr ""
+
+msgid "Address to send the reply"
+msgstr ""
+
+msgid "Add Header Value"
+msgstr ""
+
+msgid "Form Address Header"
+msgstr ""
+
+msgid "Messages"
+msgstr ""
+
+msgid "If the post was successful"
+msgstr ""
+
+msgid "If sending fails"
+msgstr ""
+
+msgid "If it does not enter correct data"
+msgstr ""
+
+msgid "If mandatory fields are left blank"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Success"
+msgstr ""
+
+msgid "You have a new message"
+msgstr ""
+
+msgid "Add Form"
+msgstr ""
+
+msgid "Send Type"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "No forms found."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Fax"
+msgstr ""
+
+msgid "Tax Number"
+msgstr ""
+
+msgid "Tax Office"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Not found form"
+msgstr ""
+
+msgid "Not Found Form"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "You have a message from your website (%website%)"
+msgstr ""
+
+msgid "Mail"
+msgstr ""
+
+msgid "Http"
+msgstr ""
+

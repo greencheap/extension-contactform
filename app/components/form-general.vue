@@ -54,7 +54,10 @@ import TextareaType from '../fields/textarea.vue'
 import PhoneType from '../fields/phone.vue'
 import RadioType from '../fields/radio.vue'
 import CheckboxType from '../fields/checkbox.vue'
-import FileType from '../fields/file.vue'
+/**
+ * @deprecated
+ * import FileType from '../fields/file.vue'
+ */
 import Buttons from '../fields/buttons.vue'
 
 // Modules
@@ -119,7 +122,10 @@ export default {
         PhoneType,
         RadioType,
         CheckboxType,
-        FileType,
+        /**
+         * @deprecated
+         * FileType,
+         */
         Buttons,
         Draggable
     }

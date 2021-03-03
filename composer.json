@@ -12,6 +12,9 @@
             "homepage": "https://greencheap.net"
         }
     ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
     "extra": {
         "image": "image.jpg",
         "scripts": "scripts.php",
