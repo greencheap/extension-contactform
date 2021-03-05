@@ -36,7 +36,7 @@ class AdminController
     {
         return [
             '$view' => [
-                'title' => 'Hello',
+                'title' => __('Forms List'),
                 'name' => 'contactform:views/admin/index.php'
             ],
             '$data' => [

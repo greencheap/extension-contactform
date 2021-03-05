@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GreenCheap 3.0.7 (greencheap/contactform, messages)\n"
-"POT-Creation-Date: 2021-03-03 13:05+0000\n"
+"POT-Creation-Date: 2021-03-05 18:42+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "Fields"
 msgstr ""
 
-msgid "Smtp Bilgileriniz Girilmemiş"
+msgid "Your Smtp Information Not Entered"
 msgstr ""
 
 msgid "Post Type"
@@ -133,6 +133,9 @@ msgid "Tax Office"
 msgstr ""
 
 msgid "Address"
+msgstr ""
+
+msgid "Forms List"
 msgstr ""
 
 msgid "Not found form"

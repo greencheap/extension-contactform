@@ -1,9 +1,9 @@
 {
     "name": "greencheap/contactform",
     "type": "greencheap-extension",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "Contact Form",
-    "description": "",
+    "description": "Create forms in your GreenCheap CMS site. Build forms and manage the submissions",
     "license": "MIT",
     "authors": [
         {

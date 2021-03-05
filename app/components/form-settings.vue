@@ -3,7 +3,7 @@
         <div v-if="!data.isSmtp" class="uk-alert-danger" uk-alert>
             <h3 class="uk-h5">
                 <i uk-icon="info" class="uk-margin-small-right"></i
-                >{{ "Smtp Bilgileriniz Girilmemiş" | trans }}
+                >{{ "Your Smtp Information Not Entered" | trans }}
             </h3>
         </div>
         <div class="uk-margin">
@@ -152,7 +152,7 @@ export default {
 
     section: {
         label: "Settings",
-        priority: 10,
+        priority: 10
     },
 
     watch: {
@@ -161,14 +161,14 @@ export default {
                 if (value == 1) {
                     this.form.data = _.merge(
                         {
-                            headers: [],
+                            headers: []
                         },
                         this.form.data
                     );
                 }
             },
-            deep: true,
-        },
+            deep: true
+        }
     },
 
     computed: {
@@ -194,20 +194,20 @@ export default {
                 return "mail";
             }
             return "link";
-        },
+        }
     },
 
     methods: {
         addValueHeader() {
             this.form.data.headers.push({
                 name: "",
-                value: "",
+                value: ""
             });
         },
 
         deleteValueHeader(id) {
             this.form.data.headers.splice(id, 1);
-        },
-    },
+        }
+    }
 };
 </script>

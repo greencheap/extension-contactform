@@ -6,7 +6,7 @@
     <?php endif ?>
 
     <div class="uk-margin uk-grid-match" uk-grid>
-        <div class="<?= $form ? 'uk-width-1-2@m':'uk-width-expand' ?> uk-flex uk-flex-middle">
+        <div class="<?= $form ? 'uk-width-1-2@m':'uk-width-expand' ?>">
             <div class="uk-card uk-card-primary uk-card-body">
                 <h1><?= $page->get('contact.main.name') ?></h1>
                 <ul class="uk-list">
